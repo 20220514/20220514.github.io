@@ -87,12 +87,12 @@ function getTimeRemaining(endtime) {
     var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11',
-    center: [12.550343, 55.665957],
+    center: [-1.9912297221638564,47.39268597823756],
     zoom: 8
     });
      
     var marker = new mapboxgl.Marker()
-    .setLngLat([12.550343, 55.665957])
+    .setLngLat([-1.9912297221638564,47.39268597823756])
     .addTo(map);
     
 
