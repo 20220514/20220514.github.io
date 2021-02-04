@@ -147,7 +147,7 @@ a:focus {
 }
 
 .intro .intro-body {
-    margin-top:60px;
+    display: table-cell;
     vertical-align: middle;
 }
 
