@@ -79,6 +79,23 @@ function getTimeRemaining(endtime) {
   const deadline = new Date('May 14 2022 14:00:00 GMT+0100');
   initializeClock('clockdiv', deadline);
 
+
+  	// TO MAKE THE MAP APPEAR YOU MUST
+	// ADD YOUR ACCESS TOKEN FROM
+	// https://account.mapbox.com
+	mapboxgl.accessToken = 'pk.eyJ1IjoiMjAyMjA1MTQiLCJhIjoiY2trcW9xbWsxMW91azJvbnN6bnZ1eWgxayJ9.RGxk-cKYRa73SwBn-aE-sA';
+    var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [12.550343, 55.665957],
+    zoom: 8
+    });
+     
+    var marker = new mapboxgl.Marker()
+    .setLngLat([12.550343, 55.665957])
+    .addTo(map);
+    
+
 // Google Maps Scripts
 // When the window has finished loading create our google map below
 // google.maps.event.addDomListener(window, 'load', init);
