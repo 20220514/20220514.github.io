@@ -1,4 +1,40 @@
-    <!-- Map Section -->
-    <div id='map'>
-    </div>
-  
+
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta charset="utf-8" />
+    <title>Display a map</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.1.0/mapbox-gl.css" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; }
+        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+    </style>
+    </head>
+    <body>
+    <div id="map"></div>
+    <script>
+// TO MAKE THE MAP APPEAR YOU MUST
+	// ADD YOUR ACCESS TOKEN FROM
+	// https://account.mapbox.com
+	mapboxgl.accessToken = 'pk.eyJ1IjoiMjAyMjA1MTQiLCJhIjoiY2trcW9xbWsxMW91azJvbnN6bnZ1eWgxayJ9.RGxk-cKYRa73SwBn-aE-sA';
+    var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [-1.9912297221638564,47.39268597823756],
+    zoom: 8
+    });
+     
+    var marker = new mapboxgl.Marker()
+    .setLngLat([-1.9912297221638564,47.39268597823756])
+    .addTo(map);
+    
+
+    </script>
+     
+    </body>
+    </html>
+    
+    
