@@ -42,11 +42,11 @@ var geojson = {
       coordinates: [-1.9912297221638564,47.39268597823756]
     },
     properties: {
-        'marker-symbol': 'heart',
-        'marker-color': '#3bb2d0',
-      'marker-size': 'large',
       title: 'Manoir Saint Marie, Campbon',
-      description: 'toto'
+      description: 'toto',
+      'marker-color': '#3bb2d0',
+      'marker-size': 'large',
+      'marker-symbol': 'heart'
     }
   }
   }]
@@ -69,13 +69,12 @@ var el = document.createElement('div');
 el.className = 'marker';
 
 // make a marker for each feature and add to the map
-
 new mapboxgl.Marker(el)
-  .setLngLat(marker.geometry.coordinates)
+.setLngLat(marker.geometry.coordinates)
   .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
     .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
   .addTo(map);
-     
+});     
     // var marker = new mapboxgl.Marker()
     // .setLngLat([-1.9912297221638564,47.39268597823756])
     // .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
