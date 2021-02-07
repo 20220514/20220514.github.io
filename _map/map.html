@@ -11,11 +11,46 @@
     <style>
         body { margin: 0; padding: 0; }
         #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+        .mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+.marker {
+  background-image: url('mapbox-icon.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
     </style>
     </head>
     <body>
     <div id="map"></div>
     <script>
+
+var geojson = {
+  type: 'FeatureCollection',
+  features: [{
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-1.9912297221638564,47.39268597823756]
+    },
+    properties: {
+        'marker-symbol': 'heart',
+        'marker-color': '#3bb2d0',
+      'marker-size': 'large',
+      title: 'Manoir Saint Marie, Campbon',
+      description: 'toto'
+    }
+  }
+  }]
+};
 // TO MAKE THE MAP APPEAR YOU MUST
 	// ADD YOUR ACCESS TOKEN FROM
 	// https://account.mapbox.com
@@ -26,10 +61,27 @@
     center: [-1.9912297221638564,47.39268597823756],
     zoom: 8
     });
+
+    geojson.features.forEach(function(marker) {
+
+// create a HTML element for each feature
+var el = document.createElement('div');
+el.className = 'marker';
+
+// make a marker for each feature and add to the map
+
+new mapboxgl.Marker(el)
+  .setLngLat(marker.geometry.coordinates)
+  .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+    .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
+  .addTo(map);
      
-    var marker = new mapboxgl.Marker()
-    .setLngLat([-1.9912297221638564,47.39268597823756])
-    .addTo(map);
+    // var marker = new mapboxgl.Marker()
+    // .setLngLat([-1.9912297221638564,47.39268597823756])
+    // .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+    // .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
+    // .addTo(map);
+
     
 
     </script>
