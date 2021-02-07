@@ -6,7 +6,7 @@ description: "14 Mai 2022"
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
-  primary-light: '#f9dfe7'
+  primary-light: '#F5CEF3'
   primary-dark: '#000000'
   links: '#219ab3'
 
