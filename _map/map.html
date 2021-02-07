@@ -33,6 +33,8 @@
     <div id="map"></div>
     <script>
 
+
+
 var geojson = {
   type: 'FeatureCollection',
   features: [{
@@ -48,7 +50,20 @@ var geojson = {
       'marker-size': 'large',
       'marker-symbol': 'heart'
     }
-  }
+  },
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-1.9912297221638564,47.39268597823756]
+    },
+    properties: {
+      title: 'Manoir Saint Marie, Campbon',
+      description: 'toto',
+      'marker-color': '#3bb2d0',
+      'marker-size': 'large',
+      'marker-symbol': 'heart'
+    }
   }]
 };
 // TO MAKE THE MAP APPEAR YOU MUST
