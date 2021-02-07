@@ -80,20 +80,6 @@ function getTimeRemaining(endtime) {
   initializeClock('clockdiv', deadline);
 
 
-  	// TO MAKE THE MAP APPEAR YOU MUST
-	// ADD YOUR ACCESS TOKEN FROM
-	// https://account.mapbox.com
-	mapboxgl.accessToken = 'pk.eyJ1IjoiMjAyMjA1MTQiLCJhIjoiY2trcW9xbWsxMW91azJvbnN6bnZ1eWgxayJ9.RGxk-cKYRa73SwBn-aE-sA';
-    var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11',
-    center: [-1.9912297221638564,47.39268597823756],
-    zoom: 8
-    });
-     
-    var marker = new mapboxgl.Marker()
-    .setLngLat([-1.9912297221638564,47.39268597823756])
-    .addTo(map);
     
 
 // Google Maps Scripts
