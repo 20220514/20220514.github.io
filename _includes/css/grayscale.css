@@ -157,6 +157,12 @@ a:focus {
 
 .intro .intro-body .intro-text {
     font-size: 18px;
+    font-weight: 100;
+}
+
+.spanDescription {
+    background: rgba(0,0,0,.2);
+
 }
 
 @media(min-width:767px) {
