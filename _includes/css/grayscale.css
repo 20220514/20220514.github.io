@@ -153,15 +153,19 @@ a:focus {
 
 .intro .intro-body .brand-heading {
     font-size: 40px;
+    color: rgba(0,0,0,1);
+    /* background: rgba(255,255,255,.3); */
 }
 
 .intro .intro-body .intro-text {
     font-size: 18px;
     font-weight: 100;
+
 }
 
 .spanDescription {
-    background: rgba(0,0,0,.2);
+    color: rgba(0,0,0,1);
+    /* background: rgba(255,255,255,.3); */
 
 }
 
@@ -187,6 +191,8 @@ a:focus {
 	font-weight: 100;
 	text-align: center;
 	font-size: 30px;
+    color: rgba(255,255,255,1);
+    background: rgba(0,0,0,.3);
 }
 
 #clockdiv > div{
