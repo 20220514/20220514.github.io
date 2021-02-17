@@ -164,6 +164,7 @@ a:focus {
 }
 
 .spanDescription {
+    font-weight: bold;
     color: rgba(0,0,0,1);
     /* background: rgba(255,255,255,.3); */
 
